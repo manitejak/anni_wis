@@ -1,7 +1,7 @@
 from django.http import JsonResponse
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
-from .models import Wish,Comment
+from .models import Wish,Comment,Image
 import json
 from django.forms.models import model_to_dict
 
@@ -11,7 +11,15 @@ from django.forms.models import model_to_dict
 
 
 def landing_page(request):
-    return render(request, 'landing1.html', {})
+    images = Image.objects.all()
+    print(images)
+    return render(request, 'landing1.html', {'images': images})
+
+
+# def image_view(request):
+#     images = Image.objects.all()
+#     print(images)
+#     return render(request, 'landing1.html', {'images': images})
 
 
 def wish_list(request):

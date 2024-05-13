@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Dummy data for demonstration
-    const quotes = ["Quote 1", "Quote 2", "Quote 3"];
+    const quotes = ["1", "2"];
     // const images = ["https://ihplb.b-cdn.net/wp-content/uploads/2021/11/Marseilles.jpg",
     //     "https://ihplb.b-cdn.net/wp-content/uploads/2021/11/Bordeaux.jpg",
     //     "https://ihplb.b-cdn.net/wp-content/uploads/2021/11/eifel-tower-736x430.jpg"

@@ -25,11 +25,13 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('wish_list/', views.wish_list, name='wish_list'),
     path('',views.landing_page, name='landing_page'),
+    # path('',views.image_view,name='image_view'),
     path('wish/',views.add_wish, name='add_wish'),
 
 ]
 
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
     urlpatterns += staticfiles_urlpatterns()
 

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Wish,Comment
+from .models import Wish,Comment,Image
 # Register your models here.
 
 class WishesAdmin(admin.ModelAdmin):
@@ -8,3 +8,4 @@ class WishesAdmin(admin.ModelAdmin):
     
 admin.site.register(Wish)
 admin.site.register(Comment)
+admin.site.register(Image)

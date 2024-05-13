@@ -1,11 +1,11 @@
-{% extends 'base.html' %} {% load static %} {% block title %} Landing Page {% endblock %} {% block content %}
+{% extends 'base.html' %} {% load static %} {% block title %} Anniversary Wishes {% endblock %} {% block content %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Page</title>
+    <title>Anniversary Wishes</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <style>
@@ -70,30 +70,14 @@
                     <h2 style="text-align: center; color: #800020;">Our Memories</h2></div>
                 <div class="scroll-container">
                   <div class="scroll-wrapper">
+
                     <fieldset class="bouncy-images">
-                        <label style="--_img: url(https://assets.codepen.io/2585/fiddle-leaf.jpeg)">
-                            <input type="radio" name="images" value="Fiddle Leaf">
-                        </label>
-                        <label style="--_img: url(https://assets.codepen.io/2585/pink-princess.jpeg)">
-                            <input type="radio" name="images" value="Pink Princess">
-                        </label>
-                        <label style="--_img: url(https://assets.codepen.io/2585/kara-eads-zcVArTF8Frs-unsplash.jpg)">
-                            <input type="radio" name="images" value="Monstera" checked>
-                        </label>
-                        <label style="--_img: url(https://assets.codepen.io/2585/pothos.jpeg)">
-                            <input type="radio" name="images" value="Pothos">
-                        </label>
-                        <label style="--_img: url(https://assets.codepen.io/2585/rubber-tree.webp)">
-                            <input type="radio" name="images" value="Rubber Tree">
-                        </label>
-                        <label style="--_img: url(https://assets.codepen.io/2585/pink-princess.jpeg)">
-                            <input type="radio" name="images" value="Placeholder 1">
-                        </label>
-                        <label style="--_img: url(https://assets.codepen.io/2585/pothos.jpeg)">
-                            <input type="radio" name="images" value="Placeholder 2">
-                        </label>
-                        <!-- Add more labels for additional images as needed -->
-                    </fieldset>
+                      {% for image in images %}
+                      <label style="--_img: url({{ image.image_file.url }})">
+                          <input type="radio" name="images" value="{{ image.name }}">
+                      </label>
+                      {% endfor %}
+                  </fieldset>
                     <script>
                       window.addEventListener('DOMContentLoaded', function() {
                         const scrollContainer = document.querySelector('.scroll-container');
@@ -108,7 +92,7 @@
 
                         // Set up scrolling animation
                         let scrollAmount = 0;
-                        const speed = 1; // Adjust scrolling speed
+                        const speed = 3; // Adjust scrolling speed
                         function scrollLoop() {
                           scrollAmount += speed;
                           scrollContainer.scrollLeft = scrollAmount;
@@ -117,7 +101,7 @@
                           }
                         }
 
-                        setInterval(scrollLoop, 30); // Adjust interval as needed
+                        setInterval(scrollLoop, 27); // Adjust interval as needed
                       });
 
                     </script>
@@ -219,6 +203,7 @@
       <source src="./Ritha-Dhamava.mp3" type="audio/mpeg">
     </audio>
     <script src="{% static 'script.js' %}"></script>
+
 </body>
 
 </html>

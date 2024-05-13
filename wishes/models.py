@@ -19,4 +19,10 @@ class Comment(models.Model):
     date_posted = models.DateTimeField(default=timezone.now)
 
 
+class Image(models.Model):
+    name = models.CharField(max_length=200)
+    image_file = models.ImageField(upload_to='images/')
+
+    def __str__(self):
+        return self.name
 
