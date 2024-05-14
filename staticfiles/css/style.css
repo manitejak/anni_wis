@@ -258,8 +258,8 @@ svg path#heart {
   }
   
   .bouncy-images {
-    display: inline-block;
-    padding: 0px;
+    display: flex;
+    padding: 0%;
     border: #f9f9f9;
   }
   
@@ -339,12 +339,14 @@ svg path#heart {
 .cardFront {
   position: relative;
   background-color: #fff;
-  width: 250px;
+  width: 168%;
   height:350px;
   overflow: hidden;
   transform-origin: left;
   box-shadow: inset 100px 20px 100px rgba(0,0,0,.13), 30px 0 50px rgba(0,0,0,0.1);
   transition: .4s;
+  margin-left: -58%;
+  margin-top: -5%;
 }
 
 .happy, .toyou {
@@ -504,12 +506,14 @@ svg path#heart {
 .cardInside {
   position: absolute;
   background-color: #fff;
-  width: 250px;
+  width: 168%;
   height:350px;
   z-index:-1;
   left:0;
   top:0;
   box-shadow: inset 100px 20px 100px rgba(0,0,0,0.2);
+  margin-left: -58%;
+  margin-top: -5%;
 }
 
 .inside-text {
@@ -532,4 +536,3 @@ p {
 .name {
   margin-left:150px;
 }
-
